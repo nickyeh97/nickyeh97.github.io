@@ -12,6 +12,10 @@ function startup() {
 		// togglePictureInPicture()
 		document.pictureInPictureElement
 		// setTimeout(() => togglePictureInPicture(), 2000);
+	} else {
+		const listItem = document.createElement("li");
+		listItem.textContent = 'This device is not support to set pictureInPictureEnabled';
+
 	}
 	// HLS
 	if (Hls.isSupported()) {
