@@ -9,14 +9,8 @@ function startup() {
 	// PIP
 	if (document.pictureInPictureEnabled) {
 		createToggleBtn()
-		// togglePictureInPicture()
-		document.pictureInPictureElement
 		// setTimeout(() => togglePictureInPicture(), 2000);
-	} else {
-		const listItem = document.createElement("li");
-		listItem.textContent = 'This device is not support to set pictureInPictureEnabled';
-
-	}
+	} 
 	// HLS
 	if (Hls.isSupported()) {
         var hls = new Hls({
@@ -37,12 +31,12 @@ function startup() {
       }
 }
 function createToggleBtn() {
+	document.querySelector(".no-picture-in-picture").remove();
 	const togglePipButton = document.createElement("button");
 	togglePipButton.textContent = "Toggle Picture-in-Picture";
 	togglePipButton.addEventListener("click", togglePictureInPicture, false);
 
 	document.getElementById("controlbar").appendChild(togglePipButton);
-	setTimeout(() => togglePipButton.click(), 2000);
 }
 
 function togglePictureInPicture() {
@@ -59,9 +53,9 @@ function togglePictureInPicture() {
 }
 
 function onPictureInPictureResize() {
-	// const listItem = document.createElement("li");
-	// listItem.textContent = `resize - ${Date.now()}`;
+	const listItem = document.createElement("li");
+	listItem.textContent = `resize - ${Date.now()}`;
 
-	// logs.appendChild(listItem);
-	// setTimeout(() => logs.removeChild(listItem), 2000);
+	logs.appendChild(listItem);
+	setTimeout(() => logs.removeChild(listItem), 2000);
 };

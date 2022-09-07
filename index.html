@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <!-- saved from url=(0064)https://mdn.github.io/dom-examples/picture-in-picture/index.html -->
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>Picture-in-Picture Example</title>
     <script src="./src/main.js"></script>
     <link href="./src/main.css" rel="stylesheet">
@@ -14,11 +16,14 @@
 
 			<!-- <video src="https://cdn.jwplayer.com/manifests/pZxWPRg4.m3u8" id="video" muted="" autoplay="" width="80%"></video> -->
       <div id="controlbar">
+        <p class="no-picture-in-picture">
+					Picture-in-Picture mode not available
+				<p>
       </div>
       <ul id="logs"></ul>
     </div>
 
-    <script src="https://hls-js.netlify.app/dist/hls.js"></script>
+    <script muted autoplay width="80%" src="https://hls-js.netlify.app/dist/hls.js"></script>
 
     <div>
       <h1>Hls.js demo - basic usage</h1>
